@@ -1,0 +1,50 @@
+.common-button {
+    background-color: #ff6969;
+    color: white;
+    border: none;
+    cursor: pointer;
+    height: 35px;
+    border-radius: 5px;
+    padding: 5px 15px;
+}
+
+.common-input {
+    padding: 5px;
+    width: 250px;
+    height: 25px;
+    border: none;
+    border-radius: 5px;
+}
+
+.common-button:active {
+    background-color: grey;
+}
+
+.main-wrapper {
+    flex: 20;
+    background-color: #696969;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-wrapper {
+    flex: 1;
+}
+
+.app-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+
+.common-error-message {
+    color: red;
+    font-size: 12px;
+}
+
+.input-block {
+    display: flex;
+    flex-direction: column;
+}

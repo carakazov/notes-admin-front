@@ -1,0 +1,32 @@
+.inner-header-wrapper {
+    display: flex;
+    background-color: #393939;
+    color: white;
+    min-width: 650px;
+    height: 100%;
+}
+
+.header-content-wrapper {
+    display: flex;
+    flex: 4;
+}
+
+.company-logo-wrapper {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.header-line-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.header-buttons-wrapper {
+    display: flex;
+    column-gap: 5px;
+    justify-content: flex-end;
+    flex: 1;
+    padding-right: 10px;
+    align-self: center;
+}
