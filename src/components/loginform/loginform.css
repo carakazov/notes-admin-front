@@ -1,0 +1,14 @@
+.login-form-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    background-color: #393939;
+    padding: 50px;
+    border-radius: 10px;
+}
+
+.login-form-inputs-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
