@@ -4,7 +4,9 @@ export const TRANSLATION_RU = {
         required: 'обязательно',
         checkCredentials: 'Проверьте логин и пароль',
         serverError: 'Ошибка на сервере. Извините :(',
-        notAdmin: 'У вас нет прав доступа к этой странице'
+        notAdmin: 'У вас нет прав доступа к этой странице',
+        blocked: 'Заблокирован',
+        active: 'Активен'
     },
     placeholder: {
         login: 'логин',
@@ -12,5 +14,8 @@ export const TRANSLATION_RU = {
     },
     button: {
         ok: 'OK'
+    },
+    header: {
+        clientList: 'Список всех клиентов'
     }
 }

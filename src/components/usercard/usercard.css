@@ -1,0 +1,19 @@
+.user-card-wrapper {
+    display: flex;
+    background-color: #393939;
+    border-radius: 10px;
+}
+
+.username-info-block {
+    display: flex;
+    padding-left: 10px;
+    column-gap: 10px;
+    flex: 1;
+}
+
+.username-buttons-block {
+    padding-top: 10px;
+    padding-right: 10px;
+    display: flex;
+    column-gap: 10px;
+}

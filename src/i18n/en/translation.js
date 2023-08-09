@@ -4,7 +4,9 @@ export const TRANSLATION_EN = {
         required: 'required',
         checkCredentials: 'Check login and password',
         serverError: 'Server error. Sorry :(',
-        notAdmin: "You don't have authority for this page"
+        notAdmin: "You don't have authority for this page",
+        blocked: 'Blocked',
+        active: 'Active'
     },
     placeholder: {
         login: 'login',
@@ -12,5 +14,8 @@ export const TRANSLATION_EN = {
     },
     button: {
         ok: 'OK'
+    },
+    header: {
+        clientList: 'All clients list'
     }
 }
