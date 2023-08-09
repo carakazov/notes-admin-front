@@ -1,17 +1,19 @@
 import './loginform.css'
 import jwtDecode from "jwt-decode";
 import {useTranslation} from "react-i18next";
-import {useState} from "react";
+import {useContext, useState} from "react";
 import {isStringEmpty} from "../../validators/stringValidator";
 import {login} from "../../api/authApi";
 import {setData} from "../../token/holder/tokenHolder";
 import {useNavigate} from "react-router"
+import {AuthContext} from "../../context/authContext";
 
 export default function LoginForm() {
     const {t} = useTranslation()
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const [error, setError] = useState({})
+    const {hasLogged} = useContext(AuthContext)
 
     const navigate = useNavigate()
 
@@ -26,6 +28,7 @@ export default function LoginForm() {
                     const decodedToken = jwtDecode(token)
                     if(decodedToken.authorities.indexOf('ROLE_ADMIN') > -1) {
                         setData(username, password, result)
+                        hasLogged(true)
                         navigate('/users')
                     } else {
                         const errorObject = {}

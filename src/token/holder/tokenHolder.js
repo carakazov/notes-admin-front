@@ -16,10 +16,6 @@ export function setData(login, password, token) {
     sessionStorage.setItem(ACCESS_TOKEN_EXPIRATION_TIME_KEY, currentTime + expirationTime)
 }
 
-export function setCurrentUser(currentUser) {
-    sessionStorage.setItem(CURRENT_USER_DATA, currentUser)
-}
-
 export async function getToken() {
     await updateToken()
     return sessionStorage.getItem(TOKEN_KEY)
@@ -27,4 +23,6 @@ export async function getToken() {
 
 export function deleteToken() {
     sessionStorage.removeItem(TOKEN_KEY)
+    sessionStorage.removeItem(LOGIN_KEY)
+    sessionStorage.removeItem(PASSWORD_KEY)
 }
