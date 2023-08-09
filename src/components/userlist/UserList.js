@@ -4,7 +4,6 @@ import {getClientList} from "../../api/logicApi";
 import {useNavigate} from "react-router";
 import {handleApiError} from "../../helpers/errorHandler";
 import {useTranslation} from "react-i18next";
-import {use} from "i18next";
 import UserCard from "../usercard/UserCard";
 
 export default function UserList() {

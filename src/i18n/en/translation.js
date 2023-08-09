@@ -13,7 +13,8 @@ export const TRANSLATION_EN = {
         password: 'password'
     },
     button: {
-        ok: 'OK'
+        ok: 'OK',
+        logOut: 'Log out'
     },
     header: {
         clientList: 'All clients list'
