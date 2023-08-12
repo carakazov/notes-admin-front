@@ -1,14 +1,22 @@
 import './notecard.css'
 import {useTranslation} from "react-i18next";
-import {useState} from "react";
+import {useContext, useState} from "react";
 import NoteContentModal from "../modal/notecontent/NoteContentModal";
 import DeleteHistoryModal from "../modal/deletehistory/DeleteHistoryModal";
+import {NoteDetailsContext} from "../../context/noteDetailsContext";
+import {useNavigate} from "react-router";
 
 export default function NoteCard(props) {
     const {note} = props
     const [isContentModalActive, hasContentModalActive] = useState(false)
-    const [isDeleteHistoryModalActive, hasDeleteHistoryModalActive] = useState(false)
     const {t} = useTranslation()
+    const {setCurrentNote} = useContext(NoteDetailsContext)
+    const navigate = useNavigate()
+
+    function goToNoteDetails() {
+        setCurrentNote(note)
+        navigate('/note')
+    }
 
     return(
         <div className={'note-card-wrapper'}>
@@ -25,11 +33,9 @@ export default function NoteCard(props) {
             </div>
             <div className={'note-controls'}>
                 <button className={'common-button'} onClick={() => hasContentModalActive(true)}>{t('button.content')}</button>
-                <button className={'common-button'} onClick={() => hasDeleteHistoryModalActive(true)}>{t('button.showDeleteHistory')}</button>
-                <button className={'common-button'}>{t('button.showArchive')}</button>
+                <button className={'common-button'} onClick={goToNoteDetails}>{t('button.details')}</button>
             </div>
             {isContentModalActive ? <NoteContentModal content={note.content} hideFunction={() => hasContentModalActive(false)}/> : null}
-            {isDeleteHistoryModalActive ? <DeleteHistoryModal externalId={note.externalId} objectType={'note'} hideFunction={() => hasDeleteHistoryModalActive(false)}/> : null}
         </div>
     )
 }

@@ -12,7 +12,9 @@ export const TRANSLATION_RU = {
         username: 'Логин',
         loading: 'Загрузка...',
         notesList: 'Список записок',
-        currentState: 'Текущее состояние'
+        currentState: 'Текущее состояние',
+        from: 'Из',
+        to: 'В'
     },
     placeholder: {
         login: 'логин',
@@ -25,7 +27,11 @@ export const TRANSLATION_RU = {
         showDeleteHistory: 'История удалений',
         content: 'Содержание',
         close: 'Закрыть',
-        showArchive: 'Архив'
+        showArchive: 'Архив',
+        showMoveHistory: 'История перемещений',
+        changeStatus: 'Изменить статус',
+        details: 'Детали',
+        showVersion: 'Показать версию'
     },
     header: {
         clientList: 'Список всех клиентов'

@@ -13,7 +13,9 @@ export const TRANSLATION_EN = {
         email: 'Email',
         loading: 'Loading...',
         notesList: 'Notes list',
-        currentState: 'Current state'
+        currentState: 'Current state',
+        from: 'From',
+        to: 'To'
     },
     placeholder: {
         login: 'login',
@@ -26,7 +28,11 @@ export const TRANSLATION_EN = {
         showDeleteHistory: 'Show delete history',
         content: 'Content',
         close: 'Close',
-        showArchive: 'Archive'
+        showArchive: 'Archive',
+        showMoveHistory: 'Move history',
+        changeStatus: 'Change status',
+        details: 'Details',
+        showVersion: 'Show version'
     },
     header: {
         clientList: 'All clients list'

@@ -27,8 +27,8 @@ export default function UserCard(props) {
                 <p className={'username-info-item'}>{user.blocked ? t('text.blocked') : t('text.active')}</p>
             </div>
             <div className={'username-buttons-block'}>
-                <button onClick={callChangeStatus} className={'common-button'}>Изменить статус</button>
-                <button onClick={toUserPage} className={'common-button'}>Подробности</button>
+                <button onClick={callChangeStatus} className={'common-button'}>{t('button.changeStatus')}</button>
+                <button onClick={toUserPage} className={'common-button'}>{t('button.details')}</button>
             </div>
         </div>
     )

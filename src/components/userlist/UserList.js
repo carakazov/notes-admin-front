@@ -5,6 +5,7 @@ import {useNavigate} from "react-router";
 import {handleApiError} from "../../helpers/errorHandler";
 import {useTranslation} from "react-i18next";
 import UserCard from "../usercard/UserCard";
+import {NoteDetailsContext} from "../../context/noteDetailsContext";
 
 export default function UserList() {
     const [users, setUsers] = useState([])
