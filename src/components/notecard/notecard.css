@@ -1,0 +1,21 @@
+.note-card-wrapper {
+    display: flex;
+    background-color: #393939;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+.note-controls {
+    align-self: center;
+    margin-left: 15px;
+    display: flex;
+    column-gap: 10px;
+}
+
+.note-info-wrapper {
+    flex: 1;
+}
+
+.notes-block-header {
+    align-self: center;
+}

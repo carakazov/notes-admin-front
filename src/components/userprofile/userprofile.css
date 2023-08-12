@@ -1,0 +1,20 @@
+.user-page-wrapper {
+    padding: 10px;
+    color: white;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.user-info-wrapper {
+    background-color: #393939;
+    border-radius: 25px;
+    padding: 20px;
+}
+
+.directory-list-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}

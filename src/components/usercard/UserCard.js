@@ -16,6 +16,10 @@ export default function UserCard(props) {
             .catch(status => handleApiError(status, () => navigate("/"), () => navigate("/error")))
     }
 
+    function toUserPage() {
+        navigate(`/users/${user.externalId}/${user.username}`)
+    }
+
     return(
         <div className={'user-card-wrapper'}>
             <div className={'username-info-block'}>
@@ -24,7 +28,7 @@ export default function UserCard(props) {
             </div>
             <div className={'username-buttons-block'}>
                 <button onClick={callChangeStatus} className={'common-button'}>Изменить статус</button>
-                <button className={'common-button'}>Подробности</button>
+                <button onClick={toUserPage} className={'common-button'}>Подробности</button>
             </div>
         </div>
     )

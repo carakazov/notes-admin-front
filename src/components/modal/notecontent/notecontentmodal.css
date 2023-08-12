@@ -1,0 +1,9 @@
+.note-content-modal {
+    background-color: white;
+    color: black;
+    width: 35vw;
+    height: 35vw;
+    border-radius: 25px;
+    padding: 10px;
+    overflow: auto;
+}
