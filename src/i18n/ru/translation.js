@@ -6,7 +6,13 @@ export const TRANSLATION_RU = {
         serverError: 'Ошибка на сервере. Извините :(',
         notAdmin: 'У вас нет прав доступа к этой странице',
         blocked: 'Заблокирован',
-        active: 'Активен'
+        active: 'Активен',
+        clusterId: 'ID кластера',
+        userId: 'ID пользователя',
+        username: 'Логин',
+        loading: 'Загрузка...',
+        notesList: 'Список записок',
+        currentState: 'Текущее состояние'
     },
     placeholder: {
         login: 'логин',
@@ -14,7 +20,12 @@ export const TRANSLATION_RU = {
     },
     button: {
         ok: 'OK',
-        logOut: 'Выйти'
+        logOut: 'Выйти',
+        showNotes: 'Показать записки',
+        showDeleteHistory: 'История удалений',
+        content: 'Содержание',
+        close: 'Закрыть',
+        showArchive: 'Архив'
     },
     header: {
         clientList: 'Список всех клиентов'

@@ -26,6 +26,58 @@ export async function changeStatus(externalId) {
     return Promise.reject(result.status)
 }
 
+export async function getUserProfile(externalId) {
+    let token = await getToken()
+    let result = await fetch(`${process.env.REACT_APP_LOGIC_BACKENG_URL}/client/${externalId}`, {
+        method: 'GET',
+        headers: getHeaders(token)
+    })
+    if(result.ok) {
+        return await result.json()
+    }
+
+    return Promise.reject(result.status)
+}
+
+export async function getUserCluster(externalId) {
+    let token = await getToken()
+    let result = await fetch(`${process.env.REACT_APP_LOGIC_BACKENG_URL}/client/${externalId}/admin`, {
+        method: 'GET',
+        headers: getHeaders(token)
+    })
+    if(result.ok) {
+        return await result.json()
+    }
+
+    return Promise.reject(result.status)
+}
+
+export async function getDirectoryDeleteHistory(externalId) {
+    let token = await getToken()
+    let result = await fetch(`${process.env.REACT_APP_LOGIC_BACKENG_URL}/directory/${externalId}/deleteHistory`, {
+        method: 'GET',
+        headers: getHeaders(token)
+    })
+    if(result.ok) {
+        return await result.json()
+    }
+
+    return Promise.reject(result.status)
+}
+
+export async function getNoteDeleteHistory(externalId) {
+    let token = await getToken()
+    let result = await fetch(`${process.env.REACT_APP_LOGIC_BACKENG_URL}/note/${externalId}/deleteHistory`, {
+        method: 'GET',
+        headers: getHeaders(token)
+    })
+    if(result.ok) {
+        return await result.json()
+    }
+
+    return Promise.reject(result.status)
+}
+
 function getHeaders(token) {
     return {
         'content-type': 'application/json',

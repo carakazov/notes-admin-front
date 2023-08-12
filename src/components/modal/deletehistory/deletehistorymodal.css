@@ -1,0 +1,37 @@
+.delete-history-modal {
+    background-color: white;
+    width: 55vw;
+    height: 55vh;
+    min-width: 400px;
+    min-height: 400px;
+    color: black;
+    padding: 10px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.deleted-object-header {
+    border-bottom: black solid 1px;
+}
+
+.history-item-wrapper {
+    background-color: #393939;
+    border-radius: 25px;
+    color: white;
+    padding: 3px;
+    display: flex;
+}
+
+.history-item {
+    flex: 1;
+}
+
+.history-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    max-height: 350px;
+    overflow-y: auto;
+}
