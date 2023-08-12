@@ -1,0 +1,33 @@
+.archive-history-wrapper {
+    background-color: white;
+    width: 55vw;
+    height: 55vh;
+    border-radius: 25px;
+    padding: 10px;
+    min-width: 400px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.archive-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.archive-item {
+    background-color: #393939;
+    padding: 10px;
+    color: white;
+    border-radius: 25px;
+    display: flex;
+}
+
+.archive-date {
+    flex: 1;
+    align-self: center;
+    max-height: 350px;
+    overflow-y: auto;
+}

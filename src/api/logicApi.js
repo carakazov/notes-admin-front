@@ -78,6 +78,45 @@ export async function getNoteDeleteHistory(externalId) {
     return Promise.reject(result.status)
 }
 
+export async function getMoveHistory(externalId) {
+    let token = await getToken()
+    let result = await fetch(`${process.env.REACT_APP_LOGIC_BACKENG_URL}/note/${externalId}/replacingHistory`, {
+        method: 'GET',
+        headers: getHeaders(token)
+    })
+    if(result.ok) {
+        return await result.json()
+    }
+
+    return Promise.reject(result.status)
+}
+
+export async function getArchive(externalId) {
+    let token = await getToken()
+    let result = await fetch(`${process.env.REACT_APP_LOGIC_BACKENG_URL}/note/${externalId}/archiveHistory`, {
+        method: 'GET',
+        headers: getHeaders(token)
+    })
+    if(result.ok) {
+        return await result.json()
+    }
+
+    return Promise.reject(result.status)
+}
+
+export async function getVersion(externalId) {
+    let token = await getToken()
+    let result = await fetch(`${process.env.REACT_APP_LOGIC_BACKENG_URL}/note/${externalId}/version`, {
+        method: 'GET',
+        headers: getHeaders(token)
+    })
+    if(result.ok) {
+        return await result.json()
+    }
+
+    return Promise.reject(result.status)
+}
+
 function getHeaders(token) {
     return {
         'content-type': 'application/json',

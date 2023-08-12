@@ -1,0 +1,18 @@
+.note-details-page {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.note-header-wrapper {
+    background-color: #393939;
+    color: white;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+.note-controls-wrapper {
+    display: flex;
+    column-gap: 5px;
+}

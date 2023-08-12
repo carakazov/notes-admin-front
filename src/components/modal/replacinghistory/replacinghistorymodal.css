@@ -1,0 +1,30 @@
+.replacing-history-modal-wrapper {
+    height: 55vh;
+    width: 55vw;
+    background-color: white;
+    padding: 10px;
+    border-radius: 25px;
+    min-width: 400px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+.note-details-header-wrapper {
+    border-bottom: black solid 1px;
+}
+
+.move-history-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    max-height: 350px;
+    overflow-y: auto;
+}
+
+.move-item {
+    background-color: #393939;
+    color: white;
+    padding: 10px;
+    border-radius: 25px;
+}
