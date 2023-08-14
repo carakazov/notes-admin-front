@@ -20,8 +20,8 @@ export default function ArchiveListModal(props) {
             .then(result => setArchive(result))
             .catch(status => handleApiError(
                 status,
-                () => navigate("/"),
-                () => navigate("/error")
+                () => navigate("/admin"),
+                () => navigate("/admin/error")
             ))
     }, [externalId])
 
@@ -33,8 +33,8 @@ export default function ArchiveListModal(props) {
             })
             .catch(status => handleApiError(
                 status,
-                () => navigate("/"),
-                () => navigate("/error")
+                () => navigate("/admin"),
+                () => navigate("/admin/error")
             ))
     }
 

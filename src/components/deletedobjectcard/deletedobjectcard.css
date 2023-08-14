@@ -1,0 +1,12 @@
+.deleted-object-wrapper {
+    display: flex;
+    column-gap: 30px;
+    background-color: #393939;
+    color: white;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+.deleted-object-info-wrapper {
+    flex: 1;
+}

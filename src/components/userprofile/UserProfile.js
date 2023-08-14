@@ -12,6 +12,7 @@ export default function UserProfile() {
     const navigate = useNavigate()
     const {t} = useTranslation()
 
+
     const [user, setUser] = useState()
     const [cluster, setCluster] = useState()
     const [isPending, hasPending] = useState(true)
@@ -26,16 +27,16 @@ export default function UserProfile() {
                     })
                     .catch(status => handleApiError(
                         status,
-                        () => navigate("/"),
-                        () => navigate("/error")
+                        () => navigate("/admin"),
+                        () => navigate("/admin/error")
                     ))
             })
             .catch(status => handleApiError(
                 status,
-                () => navigate("/"),
-                () => navigate("/error")
+                () => navigate("/admin"),
+                () => navigate("/admin/error")
             ))
-    }, [externalId])
+    }, [])
 
     if(isPending) {
         return(
@@ -54,6 +55,7 @@ export default function UserProfile() {
                     <p className={'user-details-item'}>{`${t('text.email')} - ${user?.email}`}</p>
                     <p className={'user-details-item'}>{`${t('text.clusterId')} - ${cluster?.clusterExternalId}`}</p>
                     <p className={'user-details-item'}>{`${t('text.userId')} - ${cluster?.userExternalId}`}</p>
+                    <button onClick={() => navigate(`/admin/recreate/${user?.externalId}`)} className={'common-button'}>{t('button.deletedObjects')}</button>
                 </div>
             </div>
             <div className={'directory-list-wrapper'}>

@@ -15,7 +15,10 @@ export const TRANSLATION_EN = {
         notesList: 'Notes list',
         currentState: 'Current state',
         from: 'From',
-        to: 'To'
+        to: 'To',
+        directories: 'Directories',
+        notes: 'Notes',
+        fatalError: 'Sorry, error occurred. Try later.'
     },
     placeholder: {
         login: 'login',
@@ -32,7 +35,9 @@ export const TRANSLATION_EN = {
         showMoveHistory: 'Move history',
         changeStatus: 'Change status',
         details: 'Details',
-        showVersion: 'Show version'
+        showVersion: 'Show version',
+        recreate: 'Recreate',
+        deletedObjects: 'Deleted objects'
     },
     header: {
         clientList: 'All clients list'

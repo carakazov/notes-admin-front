@@ -17,8 +17,8 @@ export default function ReplacingHistoryModal(props) {
             .then(result => setHistory(result))
             .catch(status => handleApiError(
                 status,
-                () => navigate("/"),
-                () => navigate("/error")
+                () => navigate("/admin"),
+                () => navigate("/admin/error")
             ))
     }, [externalId])
 

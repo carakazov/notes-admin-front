@@ -117,6 +117,48 @@ export async function getVersion(externalId) {
     return Promise.reject(result.status)
 }
 
+export async function getDeletedObjects(externalId) {
+    let token = await getToken()
+    let result = await fetch(`${process.env.REACT_APP_LOGIC_BACKENG_URL}/client/${externalId}/deleted`, {
+        method: 'GET',
+        headers: getHeaders(token)
+    })
+
+    if(result.ok) {
+        return await result.json()
+    }
+
+    return Promise.reject(result.status)
+}
+
+export async function recreateDirectory(externalId) {
+    let token = await getToken()
+    let result = await fetch(`${process.env.REACT_APP_LOGIC_BACKENG_URL}/recreate/directory/${externalId}`, {
+        method: 'PUT',
+        headers: getHeaders(token)
+    })
+
+    if(result.ok) {
+        return Promise.resolve()
+    }
+
+    return Promise.reject(result.status)
+}
+
+export async function recreateNote(externalId) {
+    let token = await getToken()
+    let result = await fetch(`${process.env.REACT_APP_LOGIC_BACKENG_URL}/recreate/note/${externalId}`, {
+        method: 'PUT',
+        headers: getHeaders(token)
+    })
+
+    if(result.ok) {
+        return Promise.resolve()
+    }
+
+    return Promise.reject(result.status)
+}
+
 function getHeaders(token) {
     return {
         'content-type': 'application/json',

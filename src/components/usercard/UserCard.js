@@ -13,11 +13,11 @@ export default function UserCard(props) {
     function callChangeStatus() {
         changeStatus(user.externalId)
             .then(() => reloadFunction())
-            .catch(status => handleApiError(status, () => navigate("/"), () => navigate("/error")))
+            .catch(status => handleApiError(status, () => navigate("/admin"), () => navigate("/error")))
     }
 
     function toUserPage() {
-        navigate(`/users/${user.externalId}/${user.username}`)
+        navigate(`/admin/users/${user.externalId}/${user.username}`)
     }
 
     return(

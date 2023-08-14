@@ -14,7 +14,10 @@ export const TRANSLATION_RU = {
         notesList: 'Список записок',
         currentState: 'Текущее состояние',
         from: 'Из',
-        to: 'В'
+        to: 'В',
+        directories: 'Папки',
+        notes: 'Записки',
+        fatalError: 'Извините. Ошибка на сервере. Попробуйте позже'
     },
     placeholder: {
         login: 'логин',
@@ -31,7 +34,9 @@ export const TRANSLATION_RU = {
         showMoveHistory: 'История перемещений',
         changeStatus: 'Изменить статус',
         details: 'Детали',
-        showVersion: 'Показать версию'
+        showVersion: 'Показать версию',
+        recreate: 'Восстановить',
+        deletedObjects: 'Удаленные объекты'
     },
     header: {
         clientList: 'Список всех клиентов'
