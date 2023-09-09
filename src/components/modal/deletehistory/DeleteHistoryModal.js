@@ -19,16 +19,16 @@ export default function DeleteHistoryModal(props) {
                 .then(result => setHistoryWrapper(result))
                 .catch(status => handleApiError(
                     status,
-                    () => navigate("/admin"),
-                    () => navigate("/admin/error")
+                    () => navigate("/"),
+                    () => navigate("/error")
                 ))
         } else {
             getNoteDeleteHistory(externalId)
                 .then(result => setHistoryWrapper(result))
                 .catch(status => handleApiError(
                     status,
-                    () => navigate("/admin"),
-                    () => navigate("/admin/error")
+                    () => navigate("/"),
+                    () => navigate("/error")
                 ))
         }
     }, [externalId])

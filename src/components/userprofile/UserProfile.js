@@ -27,14 +27,14 @@ export default function UserProfile() {
                     })
                     .catch(status => handleApiError(
                         status,
-                        () => navigate("/admin"),
-                        () => navigate("/admin/error")
+                        () => navigate("/"),
+                        () => navigate("/error")
                     ))
             })
             .catch(status => handleApiError(
                 status,
-                () => navigate("/admin"),
-                () => navigate("/admin/error")
+                () => navigate("/"),
+                () => navigate("/error")
             ))
     }, [])
 
@@ -55,7 +55,7 @@ export default function UserProfile() {
                     <p className={'user-details-item'}>{`${t('text.email')} - ${user?.email}`}</p>
                     <p className={'user-details-item'}>{`${t('text.clusterId')} - ${cluster?.clusterExternalId}`}</p>
                     <p className={'user-details-item'}>{`${t('text.userId')} - ${cluster?.userExternalId}`}</p>
-                    <button onClick={() => navigate(`/admin/recreate/${user?.externalId}`)} className={'common-button'}>{t('button.deletedObjects')}</button>
+                    <button onClick={() => navigate(`/recreate/${user?.externalId}`)} className={'common-button'}>{t('button.deletedObjects')}</button>
                 </div>
             </div>
             <div className={'directory-list-wrapper'}>

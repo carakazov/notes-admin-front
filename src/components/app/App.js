@@ -1,10 +1,21 @@
 import './app.css';
 import Header from "../header/Header";
 import Main from "../main/Main";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {AuthContext} from "../../context/authContext";
 import {LOGIN_KEY} from "../../constans/tokenConstants";
+import {useNavigate} from "react-router";
 export default function App() {
+    const [crutch, setCrutch] = useState(true)
+    const navigate = useNavigate()
+    //Не смотрите сюда, это такой костыль
+    useEffect(() => {
+        if(crutch) {
+            navigate("/")
+            setCrutch(false)
+        }
+    }, [crutch])
+
     const [isLogged, hasLogged] = useState(sessionStorage.getItem(LOGIN_KEY) !== null)
 
     return(

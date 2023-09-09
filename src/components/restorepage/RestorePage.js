@@ -23,7 +23,7 @@ export default function RestorePage() {
                     hasShouldReload(false)
                 })
                 .catch(status => handleApiError(
-                    status, () => navigate("/admin"), () => navigate("/admin/error"))
+                    status, () => navigate("/"), () => navigate("/error"))
                 )
         }
     }, [isShouldReload])

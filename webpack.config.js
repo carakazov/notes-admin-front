@@ -13,10 +13,8 @@ module.exports = {
         static: {
             directory: path.join(__dirname, "public"),
         },
-        port: 3001
-    },
-    output: {
-        publicPath: 'http://localhost:3001/'
+        port: 3000,
+        allowedHosts: 'all'
     },
     entry: "./src/index",
     mode: "development",

@@ -23,8 +23,8 @@ export default function DeletedObjectCard(props) {
                 .catch(
                     status => handleApiError(
                         status,
-                    () => navigate("/admin"),
-                    () => navigate("/admin/error")
+                    () => navigate("/"),
+                    () => navigate("/error")
                     )
                 )
         }
@@ -37,8 +37,8 @@ export default function DeletedObjectCard(props) {
                 .catch(
                     status => handleApiError(
                         status,
-                        () => navigate("/admin"),
-                        () => navigate("/admin/error")
+                        () => navigate("/"),
+                        () => navigate("/error")
                     )
                 )
         }

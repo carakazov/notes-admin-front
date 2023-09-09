@@ -22,7 +22,7 @@ export default function UserList() {
         if(isReload) {
             getClientList()
                 .then(result => setUsers(result.clients))
-                .catch(status => handleApiError(status, () => navigate("/admin"), () => navigate("/admin/error")))
+                .catch(status => handleApiError(status, () => navigate("/"), () => navigate("/error")))
             hasReload(false)
         }
     }, [isReload])

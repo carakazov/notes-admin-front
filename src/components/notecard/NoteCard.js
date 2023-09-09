@@ -15,7 +15,7 @@ export default function NoteCard(props) {
 
     function goToNoteDetails() {
         setCurrentNote(note)
-        navigate('/admin/note')
+        navigate('/note')
     }
 
     return(

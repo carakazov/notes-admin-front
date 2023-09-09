@@ -17,7 +17,7 @@ export default function UserCard(props) {
     }
 
     function toUserPage() {
-        navigate(`/admin/users/${user.externalId}/${user.username}`)
+        navigate(`/users/${user.externalId}/${user.username}`)
     }
 
     return(

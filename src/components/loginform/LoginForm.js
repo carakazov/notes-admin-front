@@ -29,7 +29,7 @@ export default function LoginForm() {
                     if(decodedToken.authorities.indexOf('ROLE_ADMIN') > -1) {
                         setData(username, password, result)
                         hasLogged(true)
-                        navigate('/admin/users')
+                        navigate('/users')
                     } else {
                         const errorObject = {}
                         errorObject.notEnoughRights = t('text.notAdmin')

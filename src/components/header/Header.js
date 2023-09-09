@@ -18,7 +18,7 @@ export default function Header() {
     function logOut() {
         hasLogged(false)
         deleteToken()
-        navigate('/admin')
+        navigate('/')
     }
 
     return(
